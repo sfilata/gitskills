@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>获取absolute父级元素</title>
+    <style type="text/css">
+    .father {
+        background: blue;
+        width: 800px;
+        height: 100px;
+        position: static;
+    }
+    .child {
+        background: red;
+        width: 600px;
+        height: 200px;
+        position: absolute;
+    }
+    .uncle {
+        background: green;
+        width: 800px;
+        height: 100px;
+        position: static;
+    }
+    </style>
+</head>
+<body>
+    <div class="trueFather">
+        <div class="father">
+            <div class="child" id="child">这儿写一些文字</div>
+        </div>
+        <div class="uncle" id="uncle"></div>
+    </div>
+    <script type="text/javascript">
+    (function getFather (className) {
+
+        //var obj = document.styleSheets[0];
+        //var rule = obj.cssRules[0];
+        //alert(rule.style.position);
+
+        var child = document.getElementsByClassName(className);
+        var childStyle =getComputedStyle(child[0],false)['position'];
+        //var childStyle = document.styleSheets[0].cssRules[0];
+        alert("这个元素的position属性为:"+childStyle);
+        var father = child[0].parentNode;
+        while(getComputedStyle(father,false)['position'] == 'static') {
+            father = father.parentNode;
+            if(father == window) {
+                break;
+            }
+        }
+        return father;
+    })();
+    </script>
+</body>
+</html>
