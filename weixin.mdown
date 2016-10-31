@@ -15,7 +15,7 @@
     '/static/login?next=' + encodeURIComponent(url) + '&wechat_login=1'
 #### next参数是进行微信登录后跳转的页面，其url必须经过encode才能进行正常跳转。wechat_login参数指定此链接会调起微信授权页面。因为目前涉及微信方面只能进行一个简单的跳转，无法在其中进行进一步的方法操作，所以有些点击手机button的操作，例如自动报名之类的操作无法自动进行。
 #### 因此，我将其封装为了一个控件。其路径为
-'common/component/weChatLogin’
+    var WeChatLoginDialog = require('common/component/weChatLogin');
 #### 使用的时候以
     WeChatLoginDialog.addWechatDialog(href, successFun);
 #### 的形式进行调用。其中有两个参数，第一个是点击微信登录后跳转的页面url,即上述的next参数，调用时无需对其进行url编码。第二个参数是点击手机登录时成功后所执行的回调函数，例如手机账号登录后免费自动报名之类的操作。
