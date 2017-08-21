@@ -27,10 +27,10 @@ function showTime () {
     }
     // 若今年已过，则时间改为下一年高考时间，重新计算剩余时间
 
-    var d =  +(leftTime / (24 * 60 * 60));
-    var h =  +(leftTime / (60 * 60) % 24);
-    var m =  +(leftTime / 60 % 60);
-    var s =  +(leftTime % 60);
+    var d =  Math.ceil(leftTime / (24 * 60 * 60));
+    var h =  Math.ceil(leftTime / (60 * 60) % 24);
+    var m =  Math.ceil(leftTime / 60 % 60);
+    var s =  Math.ceil(leftTime % 60);
     //计算倒计时的天，小时，分钟，秒
 
     document.getElementById('show').innerHTML =
