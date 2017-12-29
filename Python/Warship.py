@@ -3,6 +3,7 @@ from random import randint
 board = []
 limit = 7
 number = 2
+round = 7
 
 for x in range(0, limit):
   board.append(["O"] * limit)
@@ -47,10 +48,10 @@ def instruction(guess_location, ship_location):
         result += 'There is a WarShip is at Your ' + row_idea + col_idea + '\n'
     return result
 
-for turn in range(4):
+for turn in range(round):
   print "Turn", turn + 1
-  guess_row = int(raw_input("Guess Row: "))
-  guess_col = int(raw_input("Guess Col: "))
+  guess_row = int(raw_input("Guess Row: ")) - 1
+  guess_col = int(raw_input("Guess Col: ")) - 1
 
   # Write your code below!
   guess_location = [guess_row, guess_col]
