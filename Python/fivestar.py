@@ -11,6 +11,7 @@ def main():
     turtle.down()
     turtle.pensize(2)
     turtle.color('blue')
+    turtle.stamp()
     for j in range(amount):
         for i in range(5):
             turtle.forward(distance)
