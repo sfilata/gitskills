@@ -20,21 +20,34 @@ def calculate(weight, height, age, sex):
 def main():
     flag = True
     while flag:
-        # sex = "male"
-        sex = input("Please input your sex(male or female):")
-        # weight = 80
-        weight = input("Please input your weight(kg):")
-        # height = 178
-        height = input("Please input your height(cm):")
-        # age = 23
-        age = input("Please input your age:")
-        result = calculate(weight, height, age, sex)
-        if result != -1:
-            print("Your BMR number is " + str(result))
-        confirm = input("Do you want to try again?(y/n)")
-        if confirm.lower() != 'y' and confirm.lower() != 'yes':
-            flag = False
-        print(confirm.lower())
+        try:
+            data = (input("Please input your sex, weight, height, age:")).split(',')
+            # sex = "male"
+            # sex = input("Please input your sex(male or female):")
+            sex = data[0].strip()
+            # weight = 80
+            # weight = input("Please input your weight(kg):")
+            weight = data[1].strip()
+            # height = 178
+            # height = input("Please input your height(cm):")
+            height = data[2].strip()
+            # age = 23
+            # age = input("Please input your age:")
+            age = data[3].strip()
+            result = calculate(weight, height, age, sex)
+            if result != -1:
+                print("Your BMR number is " + str(result))
+            confirm = input("Do you want to try again?(y/n)")
+            if confirm.lower() != 'y' and confirm.lower() != 'yes':
+                flag = False
+            print(confirm.lower())
+        except Exception as e:
+            print(e.message)
+        else:
+            print("The program have no errors")
+        finally:
+            print("The program is done!")
+        
 
 
 if __name__ == '__main__':
