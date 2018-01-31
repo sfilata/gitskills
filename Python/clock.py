@@ -10,7 +10,7 @@ def Skip(step):
     turtle.pendown()  
    
 def mkHand(name, length):  
-    # 注册Turtle形状，建立表针Turtle  
+    # 注册Turtle形状，建立表针TuConsolartle  
     turtle.reset()  
     Skip(-length * 0.1)  
     # 开始记录多边形的顶点。当前的乌龟位置是多边形的第一个顶点。  

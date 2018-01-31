@@ -1,0 +1,4 @@
+The complexity is too low, Please retry a password:
+The complexity is too low, Please retry a password:
+The password is <gregre123>. The complexity of the password is 3. The examination is passed!
+sed!

@@ -44,7 +44,7 @@ def calculateDay(inputYear):
 def main():
     # inputYear = input("please input the date you want to count day(like:2018/01/20):")
     # print("The date is the " + str(calculateDay(inputYear)) + "th day in this year!")
-    print(datetime.date.timetuple(datetime.datetime(2014, 3, 1)).tm_yday)
+    print(datetime.date.timetuple(datetime.datetime(2014, 4, 21)).tm_yday)
 
 if __name__ == "__main__":
     main()
