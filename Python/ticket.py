@@ -45,9 +45,9 @@ query_url='https://kyfw.12306.cn/otn/leftTicket/queryZ?leftTicketDTO.train_date=
 r = requests.get(query_url,verify=False) 
 r.encoding = 'UTF-8'
   
-with open('json.txt','w') as fp: 
-   fp.write(str(r.json())) 
-  
+# with open('json.txt','w') as fp: 
+#    fp.write(str(r.json())) 
+print(r.json())
 if 'result' in r.json()["data"]: 
   rj = r.json()["data"]["result"] 
   pt = PrettyTable() 

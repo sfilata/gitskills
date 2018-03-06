@@ -1,0 +1,36 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body,
+#map {
+    height: 100%;
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 12px;
+    margin: 0;
+}
+
+h2 span {
+    color: #0078A8;
+}
+
+.btnRow {
+    text-align: center;
+    margin-top: 5px !important;
+}
+
+.btnViewTrack, .btnViewCamera {
+    display: inline-block;
+    color: #fff !important;
+    border-radius: 4px;
+    background-color: #108ee9;
+    border-color: #108ee9;
+    padding: 0 20px;
+    line-height: 24px;
+    text-decoration: none;
+}

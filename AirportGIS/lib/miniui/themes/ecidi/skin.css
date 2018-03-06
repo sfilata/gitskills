@@ -1,0 +1,115 @@
+﻿.mini-grid-cell, .mini-grid-headerCell,
+.mini-grid-filterCell, .mini-grid-summaryCell
+{
+    overflow: hidden;
+    padding:0px;
+    border:0;
+    border-right:#a5a9ac 1px solid;
+    border-bottom:#a5a9ac 1px solid;
+    cursor:default;    
+    text-align:left;   
+    overflow:hidden;
+    _text-overflow:ellipsis; 
+    
+    padding-left:4px;	
+    padding-right:4px;        
+}
+/*a5a9ac*/
+
+
+ .ui-table-search{
+        padding-left:80px;
+        background: #f4f7fa url(images/tabimg.png) no-repeat 0 center;
+        border-bottom:1px solid #999;
+        
+    }
+    .ui-table-search th{font-weight:normal;}
+	/*.mini-grid-cell {padding:3px 0;}*/
+	
+
+.mini-textbox
+{
+    width:125px;
+    height:24px;
+ 
+}
+.mini-textbox-border
+{
+
+    height:22px;
+        
+}
+
+.mini-textbox-input
+{
+
+    height:22px;
+
+}
+
+.mini-buttonedit
+{
+    width:125px;
+    height:24px;
+
+}
+
+.mini-buttonedit-border
+{
+
+    height:22px;
+
+}
+
+
+
+.mini-buttonedit-height .mini-buttonedit-buttons
+{
+    height:21px;
+}
+
+.mini-buttonedit-input
+{
+    line-height:22px;    
+    height:22px;
+
+    
+}
+
+.mini-buttonedit input::-ms-clear,
+.mini-textbox input::-ms-clear
+{display:none;}
+
+.mini-buttonedit-button, .mini-buttonedit-close
+{    
+    width:17px;
+    height:17px;
+
+}
+
+.mini-buttonedit-icon
+{
+    width:17px;
+    height:17px;
+
+}
+input.mini-textbox,
+input.mini-buttonedit,
+input.mini-datepicker,
+input.mini-spinner,
+input.mini-timespinner,
+input.mini-combobox,
+input.mini-treeselect,
+input.mini-lookup,
+input.mini-htmlfile,
+input.mini-password,
+input.mini-checkbox,
+input.mini-textarea
+{
+    height:22px;
+    width:125px;
+}
+input.mini-textarea
+{   
+    height:50px;
+}
