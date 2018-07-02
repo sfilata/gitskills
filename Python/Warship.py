@@ -10,7 +10,7 @@ for x in range(0, limit):
 
 def print_board(board):
   for row in board:
-    print " ".join(row)
+    print (" ".join(row))
 
 print_board(board)
 
@@ -49,9 +49,9 @@ def instruction(guess_location, ship_location):
     return result
 
 for turn in range(round):
-  print "Turn", turn + 1
-  guess_row = int(raw_input("Guess Row: ")) - 1
-  guess_col = int(raw_input("Guess Col: ")) - 1
+  print ("Turn", turn + 1)
+  guess_row = int(input("Guess Row: ")) - 1
+  guess_col = int(input("Guess Col: ")) - 1
 
   # Write your code below!
   guess_location = [guess_row, guess_col]
