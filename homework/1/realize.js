@@ -34,7 +34,7 @@ function showTime () {
     //计算倒计时的天，小时，分钟，秒
 
     document.getElementById('show').innerHTML =
-    '距高考开场时间还有: <br />'+
+    '距' + nextTimeYear + '的生日还有: <br />'+
     d + '天 ' + h + ' 小时 ' + m + ' 分 ' + s + ' 秒';
 
     setTimeout('showTime()', 500);
