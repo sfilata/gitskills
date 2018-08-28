@@ -1,0 +1,27 @@
+{
+  "name": "gitskills",
+  "version": "1.0.0",
+  "description": "the sfilsta's docs repository",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sfilata/gitskills.git"
+  },
+  "keywords": [
+    "docs",
+    "test",
+    "code"
+  ],
+  "author": "sfilata",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sfilata/gitskills/issues"
+  },
+  "homepage": "https://github.com/sfilata/gitskills#readme"
+}
