@@ -4,6 +4,8 @@
 ## 文档资料列表
 * <a href="https://github.com/sfilata/gitskills/blob/master/docs/introduce.md">微信开发者调试工具</a>
 * <a href="https://github.com/sfilata/gitskills/blob/master/docs/weixin.mdown">微信弹框业务分析</a>
+* <a href="https://github.com/sfilata/gitskills/blob/master/docs/Redux.md">Redux概念总结</a>
+* <a href="https://github.com/sfilata/gitskills/blob/master/docs/code.md">常用代码资料</a>
 
 ## 代码资料内容
 1. 使用Leaflet以及百度地图API的GIS地理信息系统网页Demo
