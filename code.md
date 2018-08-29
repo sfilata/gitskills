@@ -1,13 +1,13 @@
-#常用代码整理
+# 常用代码整理
 
-###javascript常用代码
-####字符串相关
+### javascript常用代码
+#### 字符串相关
 ``` javascript
 substr(start, length) // 截取start开始长度为length的字符串
 slice(start, end) // 返回start到end的子串，不改变原字符串
 splice(start, deleteCount, item...) // 改变原来子串，从start位置开始，删除deleteCount个元素，插入item元素。后两个参数可选
 ```
-####日期格式化相关
+#### 日期格式化相关
 ``` javascript
 function formatTime() {
   var now = new Date();
@@ -51,7 +51,7 @@ function tansformZhCn(index) {
 }
 
 ```
-####编码解码相关
+#### 编码解码相关
 ``` javascript
 JSON.parse(text, reviver); // 将text字符串转换为JSON对象，对每个对象成员调用reviver
 JSON.stringify(value, replacer, space); //将value转换为字符串，每个对象键值调用replacer,插入space数量的空格
@@ -61,8 +61,8 @@ decodeURI(URIstring); // 解码url
 decodeURIComponent(URIstring); // 以组件形式解码url
 ```
 
-###git常用资源
-####标签功能
+### git常用资源
+#### 标签功能
 ``` Shell
 git tag #显示所有标签
 git tag -l 'v1.0.*' #显示v1.0开头的标签
@@ -70,13 +70,13 @@ git tag -a -m 'some tip' #增加标签并展示
 git show v1.0 #查看v1.0的信息
 git push origin --tags #推送所有标签
 ```
-####分支功能
+#### 分支功能
 ``` Shell
 git checkout -b newBranch origin/oldBranch #以远程分支为基础创建新分支
 git branch -D curBranch #删除现有分支
 git merge newBranch #merge新分支到现有分支
 ```
-####远程常用功能
+#### 远程常用功能
 ``` Shell
 git pull #拉取所有信息到本地
 git push #推送本地信息到远程
