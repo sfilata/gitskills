@@ -21,8 +21,8 @@ return !!~array.findIndex(element => (element === item));
 ```
 #### 日期格式化相关
 ``` javascript
-function formatTime() {
-  var now = new Date();
+function formatTime(date) {
+  var now = date || new Date();
   var result = "";
   result = now.getFullYear() + "年";
   result += ("0" + (now.getMonth() + 1)).slice(-2) + "月";
@@ -30,36 +30,21 @@ function formatTime() {
   result += ("0" + now.getHours()).slice(-2) + ":";
   result += ("0" + now.getMinutes()).slice(-2) + ":";
   result += ("0" + now.getSeconds()).slice(-2) + " 星期";
-  result += tansformZhCn(now.getDay());
+  result += transformZhCn(now.getDay());
   return result;
 }
 
-function tansformZhCn(index) {
-  switch (index) {
-    case 0:
-      return "日";
-      break;
-    case 1:
-      return "一";
-      break;
-    case 2:
-      return "二";
-      break;
-    case 3:
-      return "三";
-      break;
-    case 4:
-      return "四";
-      break;
-    case 5:
-      return "五";
-      break;
-    case 6:
-      return "六";
-      break;
-    default:
-      break;
-  }
+function transformZhCn(index) {
+    let dataObj = {
+        0: '日',
+        1: '一',
+        2: '二',
+        3: '三',
+        4: '四',
+        5: '五',
+        6: '六'
+    };
+    return dataObj[index];
 }
 
 ```
