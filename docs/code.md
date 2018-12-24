@@ -7,6 +7,18 @@ substr(start, length) // 截取start开始长度为length的字符串
 slice(start, end) // 返回start到end的子串，不改变原字符串
 splice(start, deleteCount, item...) // 改变原来子串，从start位置开始，删除deleteCount个元素，插入item元素。后两个参数可选
 ```
+#### 判断数组中是否有该元素（可传比较函数）
+``` javascript
+/**
+* find item in array
+* @param  {[type]} array [description]
+* @param  {[type]} item  [description]
+* @return {[boolean]}    is the item in array
+*/
+function find(array, item) {
+return !!~array.findIndex(element => (element === item));
+}
+```
 #### 日期格式化相关
 ``` javascript
 function formatTime() {
