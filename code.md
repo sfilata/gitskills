@@ -16,7 +16,7 @@ splice(start, deleteCount, item...) // 改变原来子串，从start位置开始
 * @return {[boolean]}    is the item in array
 */
 function find(array, item) {
-return !!~array.findIndex(element => (element === item));
+    return !!~array.findIndex(element => (element === item));
 }
 ```
 #### 日期格式化相关
