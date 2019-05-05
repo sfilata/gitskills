@@ -58,21 +58,63 @@ decodeURI(URIstring); // 解码url
 decodeURIComponent(URIstring); // 以组件形式解码url
 ```
 
-#### React Element UI Form 组件 Rules 类型整理
-> * `string`: Must be of type string. This is the default type.
-> * `number`: Must be of type number.
-> * `boolean`: Must be of type boolean.
-> * `method`: Must be of type function.
-> * `regexp`: Must be an instance of RegExp or a string that does not generate an exception when creating a new RegExp.
-> * `integer`: Must be of type number and an integer.
-> * `float`: Must be of type number and a floating point number.
-> * `array`: Must be an array as determined by Array.isArray.
-> * `object`: Must be of type object and not Array.isArray.
-> * `enum`: Value must exist in the enum.
-> * `date`: Value must be valid as determined by Date
-> * `url`: Must be of type url.
-> * `hex`: Must be of type hex.
-> * `email`: Must be of type email.
+### CSS常用代码
+#### 超出省略
+``` css
+.line-camp( @clamp:2 ) {
+    text-overflow: -o-ellipsis-lastline;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: @clamp;
+    -webkit-box-orient: vertical;
+}
+
+```
+
+#### 两端对齐
+``` css
+div {
+    margin: 10px 0;
+    width: 100px;
+    border: 1px solid red;
+    text-align: justify;
+    text-align-last:justify
+}
+div:after{
+    content: '';
+    display: inline-block;
+    width: 100%;
+}
+```
+
+#### 处理1px细线问题
+``` css
+// transform + 伪类处理方案 (低版本可能会出现断裂)
+.border_bottom {
+    overflow: hidden;
+    position: relative;
+    border: none!important;
+}
+.border_bottom:after {
+    content: ".";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #d4d6d7;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+}
+
+// box-shadow 替代方案 (颜色会变浅)
+.border_bottom {
+  box-shadow: inset 0px -1px 1px -1px #d4d6d7;
+}
+```
 
 ### git常用资源
 #### 标签功能
